@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.csci310project2.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.csci310project2.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_editprofileFragment2"
+            app:destination="@id/editprofileFragment2" />
+        <action
+            android:id="@+id/action_SecondFragment_to_createListingFragment"
+            app:destination="@id/createListingFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_managelistingFragment"
+            app:destination="@id/managelistingFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_filtersortFragment"
+            app:destination="@id/filtersortFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editprofileFragment2"
+        android:name="com.example.csci310project2.EditprofileFragment"
+        android:label="Edit Profile" >
+        <action
+            android:id="@+id/action_editprofileFragment2_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createListingFragment"
+        android:name="com.example.csci310project2.CreateListingFragment"
+        android:label="Create Listing" >
+        <action
+            android:id="@+id/action_createlistingFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.csci310project2.LoginFragment"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_loginFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewListingFragment"
+        android:name="com.example.csci310project2.ViewListingFragment"
+        android:label="View Listings" >
+        <action
+            android:id="@+id/action_viewListingFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_viewListingFragment_to_viewPostFragment"
+            app:destination="@id/viewPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/managelistingFragment"
+        android:name="com.example.csci310project2.ManagelistingFragment"
+        android:label="Manage Listings" >
+        <action
+            android:id="@+id/action_managelistingFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_managelistingFragment_to_viewResponsesFragment"
+            app:destination="@id/viewResponsesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filtersortFragment"
+        android:name="com.example.csci310project2.FiltersortFragment"
+        android:label="Filter and Sort" >
+        <action
+            android:id="@+id/action_filtersortFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_filtersortFragment_to_viewListingFragment"
+            app:destination="@id/viewListingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPostFragment"
+        android:name="com.example.csci310project2.ViewPostFragment"
+        android:label="View Post" >
+        <action
+            android:id="@+id/action_viewPostFragment_to_SecondFragment"
+            app:destination="@+id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewResponsesFragment"
+        android:name="com.example.csci310project2.ViewResponsesFragment"
+        android:label="View Responses" >
+        <action
+            android:id="@+id/action_viewResponsesFragment_to_decideResponseFragment"
+            app:destination="@id/decideResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/decideResponseFragment"
+        android:name="com.example.csci310project2.DecideResponseFragment"
+        android:label="Decide Response" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.csci310project2.MessageFragment"
+        android:label="Message" >
+        <action
+            android:id="@+id/action_messageFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+</navigation>
